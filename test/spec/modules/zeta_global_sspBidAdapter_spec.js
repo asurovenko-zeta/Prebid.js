@@ -602,7 +602,7 @@ describe('Zeta Ssp Bid Adapter', function () {
     expect(bidResponse[0].mediaType).to.eql(BANNER);
     expect(bidResponse[0].ad).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
     expect(bidResponse[0].vastXml).to.be.undefined;
-    expect(bidResponse[0].dspId).to.eql(zetaResponse.body.seatbid[0].seat);
+    expect(bidResponse[0].zg_dspId).to.eql(zetaResponse.body.seatbid[0].seat);
   });
 
   it('Test the response default mediaType:video', function () {
@@ -612,7 +612,7 @@ describe('Zeta Ssp Bid Adapter', function () {
     expect(bidResponse[0].mediaType).to.eql(VIDEO);
     expect(bidResponse[0].ad).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
     expect(bidResponse[0].vastXml).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
-    expect(bidResponse[0].dspId).to.eql(zetaResponse.body.seatbid[0].seat);
+    expect(bidResponse[0].zg_dspId).to.eql(zetaResponse.body.seatbid[0].seat);
   });
 
   it('Test the response mediaType:video from ext param', function () {
@@ -627,7 +627,7 @@ describe('Zeta Ssp Bid Adapter', function () {
     expect(bidResponse[0].mediaType).to.eql(VIDEO);
     expect(bidResponse[0].ad).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
     expect(bidResponse[0].vastXml).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
-    expect(bidResponse[0].dspId).to.eql(zetaResponse.body.seatbid[0].seat);
+    expect(bidResponse[0].zg_dspId).to.eql(zetaResponse.body.seatbid[0].seat);
   });
 
   it('Test the response mediaType:banner from ext param', function () {
@@ -642,7 +642,7 @@ describe('Zeta Ssp Bid Adapter', function () {
     expect(bidResponse[0].mediaType).to.eql(BANNER);
     expect(bidResponse[0].ad).to.eql(zetaResponse.body.seatbid[0].bid[0].adm);
     expect(bidResponse[0].vastXml).to.be.undefined;
-    expect(bidResponse[0].dspId).to.eql(zetaResponse.body.seatbid[0].seat);
+    expect(bidResponse[0].zg_dspId).to.eql(zetaResponse.body.seatbid[0].seat);
   });
 
   it('Test provide segments into the request', function () {

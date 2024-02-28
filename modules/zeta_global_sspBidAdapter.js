@@ -225,7 +225,7 @@ export const spec = {
             bid.vastXml = bid.ad;
           }
           if (seat) {
-            bid.dspId = seat;
+            bid.zg_dspId = seat;
           }
           bidResponses.push(bid);
         })
